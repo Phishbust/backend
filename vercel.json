@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "classifier/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "classifier/wsgi.py"
+      }
+    ]
+}
