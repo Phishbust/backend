@@ -1,9 +1,0 @@
-from django.urls import path
-
-from django.contrib import admin
-from . import views
-
-urlpatterns = [
-    path('admin/',admin.site.urls),
-    path("detection/", views.DetectionListCreate.as_view(), name="detection-view-create"),
-]
