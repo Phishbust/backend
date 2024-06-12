@@ -1,9 +1,6 @@
 from django.urls import path
-
-from django.contrib import admin
-from . import views
+from .views import PredictView
 
 urlpatterns = [
-    path('admin/',admin.site.urls),
-    path("detection/", views.DetectionListCreate.as_view(), name="detection-view-create"),
+    path('predict/', PredictView.as_view(), name='predict'),
 ]
